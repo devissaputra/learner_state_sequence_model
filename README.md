@@ -16,11 +16,11 @@ A learner session is a sequence, not a bag of clicks. This repository models tra
 
 **Who may find it useful:** Researchers working on process mining, self-regulated learning, and sequential learner modeling.
 
-## Research questions
+## Questions answered by the current baseline
 
-1. Can compact transition models reveal stable learner-state patterns?
-2. Which transitions precede recovery, productive struggle, or disengagement?
-3. How stable are observed transition patterns across learners, courses, and activity types?
+1. Which first-order state transitions occur in an observed sequence?
+2. How uncertain are outgoing transitions, as summarized by transition entropy?
+3. How often do adjacent observations remain in the same state?
 
 ## How it works
 
