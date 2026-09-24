@@ -9,6 +9,11 @@ description = "Descriptive sequence analytics for learner state transitions, ent
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "Devis Wawan Saputra"}]
+readme = "README.md"
+keywords = ["ai-in-education", "aied", "learning-analytics", "self-regulated-learning", "sequence-analysis", "learner-modeling"]
+
+[project.urls]
+Repository = "https://github.com/devissaputra/learner_state_sequence_model"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
