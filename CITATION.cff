@@ -5,6 +5,6 @@ type: software
 authors:
   - family-names: "Saputra"
     given-names: "Devis Wawan"
-repository-code: "https://github.com/devissaputra/learner-state-sequence-model"
+repository-code: "https://github.com/devissaputra/learner_state_sequence_model"
 license: MIT
 version: 0.1.0
