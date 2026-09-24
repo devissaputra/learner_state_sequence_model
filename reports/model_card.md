@@ -6,7 +6,7 @@ Learner State Sequence Model
 
 ## Purpose
 
-Descriptive sequence analytics for learner state transitions, entropy, and persistence.
+Descriptive sequence analytics for learner state transitions, entropy, persistence, and compact sequence-level summaries.
 
 ## Current maturity
 
@@ -18,7 +18,7 @@ See `../data/README.md` for the current synthetic schema and the documentation e
 
 ## Outputs
 
-The current code produces first-order transition probabilities, per state transition entropy, and sequence persistence. These outputs are research signals and should be interpreted with the educational context that produced them.
+The current code produces first-order transition probabilities, per-state transition entropy, sequence persistence, and a compact sequence summary containing observation, state, and transition counts. These outputs are research signals and should be interpreted with the educational context that produced them.
 
 ## Evidence needed before real use
 
@@ -26,7 +26,7 @@ Check whether transition estimates are stable with enough observations and wheth
 
 ## Main limitation
 
-The module assumes that state labels already exist and are meaningful. It does not infer states from raw learner behavior and it does not forecast the next-state.
+The module assumes that state labels already exist and are meaningful. It does not infer states from raw learner behavior and it does not forecast the next state.
 
 ## Human oversight
 
