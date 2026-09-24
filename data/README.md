@@ -4,7 +4,7 @@
 `sample.csv` contains only synthetic records created for smoke tests and demonstrations.
 
 ## Expected use
-Synthetic learner state traces are included. A future adapter should map an event stream with learner, timestamp, action, and state labels into the sequence format used by this baseline.
+Synthetic learner-state traces are included. A future adapter should map an event stream with learner, timestamp, action, and state labels into the sequence format used by this baseline.
 
 ## Minimum schema
 See the header of `sample.csv`. Production adapters should validate types, missing values, timestamp semantics, and learner/session boundaries before analysis.
