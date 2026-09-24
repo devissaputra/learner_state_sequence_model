@@ -41,3 +41,15 @@ def persistence(states: Sequence[Hashable]) -> float | None:
     if len(states) < 2:
         return None
     return sum(a == b for a, b in zip(states, states[1:])) / (len(states) - 1)
+
+
+def sequence_summary(states: Sequence[Hashable]) -> dict[str, object]:
+    """Return a compact descriptive summary for one observed state sequence."""
+    return {
+        "observations": len(states),
+        "unique_states": len(set(states)),
+        "transitions": max(len(states) - 1, 0),
+        "transition_matrix": transition_matrix(states),
+        "transition_entropy": transition_entropy(states),
+        "persistence": persistence(states),
+    }
