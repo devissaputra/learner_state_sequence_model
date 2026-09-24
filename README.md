@@ -2,11 +2,11 @@
 
 > Descriptive sequence analytics for learner state transitions, entropy, and persistence.
 
-[![CI](https://github.com/devissaputra/learner-state-sequence-model/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/learner-state-sequence-model/actions/workflows/ci.yml)
+[![CI](https://github.com/devissaputra/learner_state_sequence_model/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/learner_state_sequence_model/actions/workflows/ci.yml)
 
 ![Learner State Sequence Model workflow](assets/architecture.svg)
 
-**Area:** Learner Modeling & Self-Regulation    
+**Area:** AI in Education (AIEd) · Sequential Learning Analytics & Self-Regulated Learning    
 **Status:** working research prototype  
 **Author:** Devis Wawan Saputra
 
@@ -20,7 +20,7 @@ A learner session is a sequence, not a bag of clicks. This repository models tra
 
 1. Can compact transition models reveal stable learner-state patterns?
 2. Which transitions precede recovery, productive struggle, or disengagement?
-3. How robust are inferred states across courses and activity types?
+3. How stable are observed transition patterns across learners, courses, and activity types?
 
 ## How it works
 
@@ -28,7 +28,7 @@ The current module is descriptive rather than predictive. It counts adjacent sta
 
 ![Learner State Sequence Model data and reasoning flow](assets/data_flow.svg)
 
-Observed state sequences are converted directly into transition counts and probabilities, followed by entropy and persistence summaries. There is no hidden encoder and no next state classifier in this baseline.
+Observed state sequences are converted directly into transition counts and probabilities, followed by entropy and persistence summaries. There is no hidden encoder and no next-state classifier in this baseline.
 
 ![Synthetic demo snapshot for Learner State Sequence Model](assets/demo_snapshot.svg)
 
@@ -36,7 +36,7 @@ This snapshot shows the bundled synthetic example for Learner State Sequence Mod
 
 ## Methods in the current baseline
 
-- first order transition matrix
+- first-order transition matrix
 - transition probabilities
 - transition entropy
 - state persistence
@@ -44,14 +44,14 @@ This snapshot shows the bundled synthetic example for Learner State Sequence Mod
 
 ## Data
 
-Synthetic learner-state traces are included; adapters are designed for event streams with learner, timestamp, action, and state labels.
+Synthetic learner-state traces are included. A future adapter should map event streams with learner, timestamp, action, and state labels into ordered state sequences.
 
 `data/README.md` documents the sample schema and the conditions that should be recorded before any real dataset is connected. Restricted or identifiable learner data should stay outside the repository.
 
 ## Run the demo
 
 ```bash
-git clone https://github.com/devissaputra/learner-state-sequence-model.git
+git clone https://github.com/devissaputra/learner_state_sequence_model.git
 cd learner-state-sequence-model
 python scripts/run_demo.py
 python -m unittest discover -s tests -v
@@ -106,7 +106,7 @@ A credible next version would:
 
 1. define and validate state labeling rules on real traces
 2. measure transition stability across learners and contexts
-3. compare a simple next state baseline with more complex sequence models
+3. compare a simple next-state baseline with more complex sequence models
 
 ## Related work
 
