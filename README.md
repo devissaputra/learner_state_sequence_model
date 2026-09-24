@@ -24,11 +24,11 @@ A learner session is a sequence, not a bag of clicks. This repository models tra
 
 ## How it works
 
-The current module is descriptive rather than predictive. It counts adjacent state transitions, converts them to probabilities, calculates outgoing transition entropy, and measures how often consecutive observations remain in the same state.
+The current module is descriptive rather than predictive. It counts adjacent state transitions, converts them to probabilities, calculates outgoing transition entropy, measures how often consecutive observations remain in the same state, and packages those statistics into a compact sequence summary.
 
 ![Learner State Sequence Model data and reasoning flow](assets/data_flow.svg)
 
-Observed state sequences are converted directly into transition counts and probabilities, followed by entropy and persistence summaries. There is no hidden encoder and no next-state classifier in this baseline.
+Observed state sequences are converted directly into transition counts and probabilities, followed by entropy, persistence, and sequence-level descriptive summaries. There is no hidden encoder and no next-state classifier in this baseline.
 
 ![Synthetic demo snapshot for Learner State Sequence Model](assets/demo_snapshot.svg)
 
@@ -52,12 +52,12 @@ Synthetic learner-state traces are included. A future adapter should map event s
 
 ```bash
 git clone https://github.com/devissaputra/learner_state_sequence_model.git
-cd learner-state-sequence-model
+cd learner_state_sequence_model
 python scripts/run_demo.py
 python -m unittest discover -s tests -v
 ```
 
-The demo uses the sequence plan, work, work, reflect. It prints the transition matrix, transition entropy, and state persistence for that sequence.
+The demo uses the sequence plan, work, work, reflect. It prints a compact sequence summary containing the observation count, number of unique states, transition count, transition matrix, transition entropy, and state persistence.
 
 ## What to evaluate next
 
