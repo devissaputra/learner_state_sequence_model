@@ -8,11 +8,11 @@ Learner State Sequence Model
 
 1. Can compact transition models reveal stable learner-state patterns?
 2. Which transitions precede recovery, productive struggle, or disengagement?
-3. How robust are inferred states across courses and activity types?
+3. How stable are observed transition patterns across learners, courses, and activity types?
 
 ## Baseline methods
 
-- first order transition matrix
+- first-order transition matrix
 - transition probabilities
 - transition entropy
 - state persistence
@@ -20,7 +20,7 @@ Learner State Sequence Model
 
 ## Evidence to collect
 
-Start from the current transparent baseline and record every transformation needed to produce first order transition probabilities, per state transition entropy, and sequence persistence. Keep a clear boundary between synthetic demonstration data and any future empirical dataset.
+Start from the current transparent baseline and record every transformation needed to produce first-order transition probabilities, per state transition entropy, and sequence persistence. Keep a clear boundary between synthetic demonstration data and any future empirical dataset.
 
 ## Validation
 
