@@ -1,3 +1,7 @@
+# Calculation reading guide: ../CALCULATIONS.md (repository root).
+# P(j|i) = count(i→j)/sum_j count(i→j); persistence = self-transitions/(n-1).
+# A terminal state with no outgoing observation has no estimated transition row. Fewer than two observations make persistence undefined. These are descriptive first-order frequencies, not a trained sequence predictor.
+
 from collections import defaultdict
 from collections.abc import Hashable, Sequence
 from math import log2

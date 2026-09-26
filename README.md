@@ -1,14 +1,29 @@
 # Learner State Sequence Model
 
+This repository summarizes supplied learner-state sequences through transition probabilities, outgoing-state entropy, and persistence. Counts are normalized only where transitions are observed, and insufficient sequences return an undefined persistence value rather than a fabricated estimate. It is a descriptive baseline for sequence analysis; the labels must be justified separately and should not be treated as inferred mental states.
+
+## Start here
+
+- [Calculations, evidence and verification scope](CALCULATIONS.md)
+- [Figure sources and exact numerical paths](docs/figure_spec.json)
+- [Data status](data/README.md)
+
+![Study question, data, design and interpretation](assets/review_overview.svg)
+
+![Defined calculation and source-linked evidence](assets/review_calculations.svg)
+
+**Review scope:** 7 existing unittest checks passed. The bundled demonstration executed successfully in this review.
+
+## Detailed project documentation
+
 > Descriptive sequence analytics for learner state transitions, entropy, and persistence.
 
 [![CI](https://github.com/devissaputra/learner_state_sequence_model/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/learner_state_sequence_model/actions/workflows/ci.yml)
 
-![Learner State Sequence Model workflow](assets/architecture.svg)
 
 **Area:** AI in Education (AIEd) · Sequential Learning Analytics & Self-Regulated Learning    
 **Status:** working research prototype  
-**Author:** Devis Wawan Saputra
+**Author:** Devis Saputra
 
 ## What this project is for
 
@@ -26,11 +41,9 @@ A learner session is a sequence, not a bag of clicks. This repository models tra
 
 The current module is descriptive rather than predictive. It counts adjacent state transitions, converts them to probabilities, calculates outgoing transition entropy, measures how often consecutive observations remain in the same state, and packages those statistics into a compact sequence summary.
 
-![Learner State Sequence Model data and reasoning flow](assets/data_flow.svg)
 
 Observed state sequences are converted directly into transition counts and probabilities, followed by entropy, persistence, and sequence-level descriptive summaries. There is no hidden encoder and no next-state classifier in this baseline.
 
-![Synthetic demo snapshot for Learner State Sequence Model](assets/demo_snapshot.svg)
 
 This snapshot shows the bundled synthetic example for Learner State Sequence Model. It checks the software path; it is not an empirical performance result.
 
@@ -65,7 +78,6 @@ A predictive extension should be added only after state definitions and observat
 
 ## Evaluation view
 
-![Learner State Sequence Model evaluation dashboard](assets/evaluation_dashboard.svg)
 
 The Learner State Sequence Model dashboard is an evaluation checklist rather than a result chart. The bars are illustrative only; the labels show the evidence a real study would need to collect.
 

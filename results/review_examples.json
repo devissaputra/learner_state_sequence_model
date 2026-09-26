@@ -1,0 +1,8 @@
+{
+  "kind": "illustrative_calculation",
+  "note": "One supplied four-state sequence.",
+  "outputs": {
+    "self-transition proportion": 0.3333333333333333,
+    "work transition entropy (bits)": 1.0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "question": "How often do observed learner states persist or change?",
+  "data": "A supplied sequence of state labels, not inferred psychological states.",
+  "method": "Count adjacent transitions; normalize outgoing counts; calculate entropy and self-transition frequency.",
+  "formula": "P(j|i) = count(i→j)/sum_j count(i→j); persistence = self-transitions/(n-1).",
+  "interpretation": "A terminal state with no outgoing observation has no estimated transition row. Fewer than two observations make persistence undefined. These are descriptive first-order frequencies, not a trained sequence predictor.",
+  "status": "SYNTHETIC / RULE-BASED PROTOTYPE | no educational validity claim",
+  "source": "results/review_examples.json",
+  "rows": [
+    {
+      "label": "self-transition proportion",
+      "path": [
+        "outputs",
+        "self-transition proportion"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "work transition entropy (bits)",
+      "path": [
+        "outputs",
+        "work transition entropy (bits)"
+      ],
+      "unit": "unitless"
+    }
+  ],
+  "table_title": "Worked example — illustrative, not a measured research result",
+  "evidence_note": "Illustrative inputs and calculations are in scripts/review_examples.py.",
+  "finding": "This repository summarizes supplied learner-state sequences through transition probabilities, outgoing-state entropy, and persistence. Counts are normalized only where transitions are observed, and insufficient sequences return an undefined persistence value rather than a fabricated estimate. It is a descriptive baseline for sequence analysis; the labels must be justified separately and should not be treated as inferred mental states."
+}
